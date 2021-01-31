@@ -1,0 +1,36 @@
+<main>
+  <!-- form_with部分 -->
+  <%= form_with model: @book,local:true do |f| %>
+  <div id="main-title">
+    <h4>Books</h4>
+  </div>
+  <div id="book-index">
+    <div class="index-title">
+      <h4>title</h4>
+      <% @books.each do |book| %>
+      <span><%= book.title %></span>
+      <% end %>
+    </div>
+    <div class="index-item">
+      <h4>body</h4>
+      <% @books.each do |book| %>
+      <span><%= book.body %></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="main-item">
+    <div class="main-logo">
+      <h1>New book</h1>
+    </div>
+      <div class="main-list">
+        <h4>title</h4>
+        <%= f.text_field :title %>
+      </div>
+        <div class="main-list2">
+          <h4>body</h4>
+          <%= f.text_area :body %>
+          <%= f.submit '投稿' %>
+          <% end %>
+        </div>
+  </div>
+</main>
