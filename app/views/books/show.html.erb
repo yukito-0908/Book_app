@@ -4,8 +4,8 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
-    <p><%= @book.title %></p>
-    <p><%= @book.body %></p>
+    <p><span>title:<%= @book.title %></span></p>
+    <p><span>body:<%= @book.body %></span></p>
         <div class="show-list">
             <%= link_to "edit", edit_books_path(@book.id) %>
             <%= link_to 'back','/books' %>
